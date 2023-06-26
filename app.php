@@ -1,19 +1,65 @@
 <?php
 /*
-TODO: Isset()  
+TODO: Condicionales  
 */
 /*  
-?La función isset() comprueba si una variable o un elemento de un array está definido y no es null.
-?Esta función devuelve true si la variable o el elemento de array existe y tiene un valor, y false en caso
-?contrario
+?Las estructuras condicionales son una estructura de control de flujo en programación que permite que
+?el programa tome decisiones basadas en si se cumple o no una condición
 */
 /*
-TODO: Empty()  
+*If  
 */
-/*
-?la función empty() comprueba si una variable o un elemento de un array está vacío.
-?Esta función devuelve true si la variable o el elemento de array no tiene un valor definido, o si tiene
-?un valor que se considera vacío (por ejemplo, una cadena vacía, 0, false, null, un array vacío, entre
-?otros), y false en caso contrario
+$numero_uno = 5;
+$numero_dos = 10;
+
+if($numero_uno < $numero_dos){
+    echo "dos es mayor";
+} else {
+    echo "dos es menor que uno";
+}
+/*  
+*Switch Case
 */
+/*  
+?En PHP, el "switch" es una estructura de control que permite ejecutar diferentes bloques de código
+?dependiendo del valor de una variable.
+*/
+$curso='php';
+switch ($curso){
+    case 'php':
+        echo "lunes y martes";
+        case 'java':
+            echo "miercoles";
+            case 'python':
+                echo "viernes";
+                default:
+                    echo "no existe curso";
+                    break;    
+}
+/*  
+?Ciclos While, Do While y For
+*/
+/*  
+*For
+*/
+$numero = 1;
+for ($numero0= 10; $numero <= 10 ; $numero++) { 
+    echo $numero;
+}
+/*  
+*While
+*/
+$numero = 1;
+while ($numero <= 10){
+    echo $numero;
+    $numero = $numero +1;
+}
+/*  
+*Do While
+*/
+$numero = 1;
+do{
+    echo $numero;
+    $numero++;
+}while ($numero <= 15);
 
