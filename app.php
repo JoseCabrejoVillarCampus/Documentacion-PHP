@@ -1,65 +1,77 @@
 <?php
 /*
-TODO: Condicionales  
+TODO: Funciones Con Array  
 */
 /*  
-?Las estructuras condicionales son una estructura de control de flujo en programación que permite que
-?el programa tome decisiones basadas en si se cumple o no una condición
+?array_chunk = Divide el array principal en las partes que deseemos, el argumento es el numero de elementos
+*/
+$funcion = array_chunk($array,2);
+/*  
+?array_slice = Obtenemos un nuevo array dentro de los parametros que deseamos a partir del argumento
+*/
+$funcion = array_slice($array,4);
+/*  
+?array_merge = Combinamos dos arrays en uno solo
+*/
+$funcion = array_merge($array1,$array2);
+/*  
+?array_pop = Elimina el ultimo elemento de un array
+*/
+$funcion = array_pop($ultimoelemento);
+/*  
+?array_serch = nor permite buscar dentro de un array
+*/
+$funcion = array_search('elemento',$array);
+/*  
+?array_reverse = invierte el array
+*/
+$funcion = array_reverse($array);
+/*
+?array_flip(): Intercambia las claves con sus valores correspondientes en un array.  
 */
 /*
-*If  
+?array_fill(): Rellena un array con un valor especificado.
 */
-$numero_uno = 5;
-$numero_dos = 10;
-
-if($numero_uno < $numero_dos){
-    echo "dos es mayor";
-} else {
-    echo "dos es menor que uno";
-}
-/*  
-*Switch Case
+/*
+?array_filter(): Filtra los elementos de un array utilizando una función de devolución de llamada.
 */
-/*  
-?En PHP, el "switch" es una estructura de control que permite ejecutar diferentes bloques de código
-?dependiendo del valor de una variable.
+/*
+?array_map(): Aplica una función a cada elemento de un array y devuelve un nuevo array con los resultados.
 */
-$curso='php';
-switch ($curso){
-    case 'php':
-        echo "lunes y martes";
-        case 'java':
-            echo "miercoles";
-            case 'python':
-                echo "viernes";
-                default:
-                    echo "no existe curso";
-                    break;    
-}
-/*  
-?Ciclos While, Do While y For
+/*
+?array_reduce(): Reduce un array a un solo valor aplicando una función de devolución de llamada.
 */
-/*  
-*For
+/*
+?array_key_exists(): Comprueba si una clave existe en un array.
 */
-$numero = 1;
-for ($numero0= 10; $numero <= 10 ; $numero++) { 
-    echo $numero;
-}
-/*  
-*While
+/*
+?array_rand(): Devuelve una o varias claves aleatorias de un array.
 */
-$numero = 1;
-while ($numero <= 10){
-    echo $numero;
-    $numero = $numero +1;
-}
-/*  
-*Do While
+/*
+?array_unique(): Elimina los valores duplicados de un array.
 */
-$numero = 1;
-do{
-    echo $numero;
-    $numero++;
-}while ($numero <= 15);
+/*
+?array_intersect(): Devuelve un array con los valores comunes a todos los arrays dados.
+*/
+/*
+?array_diff(): Devuelve un array con los valores del primer array que no están presentes en los arrays adicionales.
+*/
+/*
+?array_push(): Agrega uno o más elementos al final de un array.
+*/
+/*
+?array_sum(): Devuelve la suma de todos los valores de un array numérico.
+*/
+/*
+?array_product(): Devuelve el producto de todos los valores de un array numérico.
+*/
+/*
+?array_keys(): Devuelve todas las claves de un array.
+*/
+/*
+?array_values(): Devuelve todos los valores de un array.
+*/
+/*
+?array_walk(): Aplica una función de devolución de llamada a cada elemento de un array.
+*/
 
