@@ -1,15 +1,21 @@
 <?php
 /*
-TODO: Json_encode  
+TODO: Programacion Orientada a Objetos PHP  
 */
 /*  
-?Se usa para convertir una estructura de datos en php en una cadena JSON
+?Clases
 */
-$message = json_encode(["Code" => 200 + $res->rowCount(), "Message" => "inserted data"]);
-/*
-TODO: Json_decode  
-*/
+class ClaseSencilla{
+    public $var ='valor'; //?atributo
+    public function mostrarvar(){
+        echo $this->var; //*$this es una pseudo variable que dispone cuando un metodo es invocadodentro del contexto de un objeto, referencia al objeto invocador
+    }
+}
 /*  
-?Se usa para convertir una cadena JSON en una estructura de datos de php
+?Instancia
 */
-\App\academic_area\academic_area::getInstance(json_decode(file_get_contents("php://input"),true))->getAllAcademicArea();
+$instancia = new ClaseSencilla;//*usamos la palabra new para crear una instancia de una clase
+/*  
+?new self y new parent
+*/
+/* En el contexto de la clase, es posible crear un nuevo objeto con estas dos formas*/
