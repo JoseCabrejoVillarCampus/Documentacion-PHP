@@ -1,7 +1,7 @@
 <?php
 /*
-TODO: Operador de Resolucion de Ambito(::)  
+TODO: ::class 
 */
 /*  
-?Tambien denominado Paamayim Nekudotayim(doblepunto en hebreo), es un token que permite acceder a elementos estaticos, constantes y sobreescribir propiedades o metodos de una clase
+?Esta palabra reservada se usa para la reslucion de nombre de clases, es una transformacion durante la compilacion, donde se obtiene un string con el nombre completamente cualificado de la clase
 */
