@@ -1,20 +1,7 @@
 <?php
 /*
-TODO: parent::  
+TODO: Operador de Resolucion de Ambito(::)  
 */
 /*  
-?Es posible acceder a los metodos sobreescritos o a las propiedades estaticas haciendo referencia a ellos con
+?Tambien denominado Paamayim Nekudotayim(doblepunto en hebreo), es un token que permite acceder a elementos estaticos, constantes y sobreescribir propiedades o metodos de una clase
 */
-class BaseClass{
-    final public function test(){
-        echo 'llamada';
-    }
-}
-class ClassExtendida extends BaseClass{
-    function mostrarVar(){
-        echo 'clase extendida';
-        parent::mostrarVar();
-    }
-}
-$extendida =  new ClassExtendida();
-$extendida->mostrarVar();
