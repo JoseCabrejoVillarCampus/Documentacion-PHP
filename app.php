@@ -1,21 +1,7 @@
 <?php
 /*
-TODO: Programacion Orientada a Objetos PHP  
+TODO: Propiedades y Metodos  
 */
 /*  
-?Clases
+?Las propiedades y los metodos se encuentran en espacios diferentes, por lo tanto es posible tener una propiedad y un metodocon el mismo nombre. Su acceso solo depende del contexto, es decir si se emplea una variable o una funcion
 */
-class ClaseSencilla{
-    public $var ='valor'; //?atributo
-    public function mostrarvar(){
-        echo $this->var; //*$this es una pseudo variable que dispone cuando un metodo es invocadodentro del contexto de un objeto, referencia al objeto invocador
-    }
-}
-/*  
-?Instancia
-*/
-$instancia = new ClaseSencilla;//*usamos la palabra new para crear una instancia de una clase
-/*  
-?new self y new parent
-*/
-/* En el contexto de la clase, es posible crear un nuevo objeto con estas dos formas*/
