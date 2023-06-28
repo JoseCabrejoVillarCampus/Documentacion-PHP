@@ -1,17 +1,21 @@
 <?php
 /*
-TODO: POO Clases 
+TODO: POO Metodos estaticos 
 */
 /*  
-?Las clases son una plantilla que nos permiten definir caracteristicas y comportamientos de los objetosque se pueden crear a traves de dicha clase
+?un método estático es un método que pertenece a la clase en sí y no a una
+?instancia específica de la clase. A diferencia de los métodos de instancia, los métodos estáticos se
+?pueden llamar directamente en la clase sin necesidad de crear un objeto o instancia de la misma.
 */
 class perro{
     private $nombre;
     protected $raza;
+    private static $ladrar;
 
     public function __construct($nombre, $edad){
         $this-> nombre = $nombre;
         $this-> raza = $edad;
+        self::$ladrar=$nombre;
     }
     public function getNombre(){
         return $this->nombre;
@@ -26,7 +30,7 @@ class perro{
         $this->raza=$raza;
     }
     public function ladrar(){
-        echo 'wof wof, te ladra'.$this->nombre;
+        echo 'wof wof'.self::$ladrar.$this->nombre;
     }
 }
 /*
