@@ -1,14 +1,13 @@
 <?php
 /*
-TODO: POO Metodos estaticos 
+TODO: POO Herencia 
 */
 /*  
-?un método estático es un método que pertenece a la clase en sí y no a una
-?instancia específica de la clase. A diferencia de los métodos de instancia, los métodos estáticos se
-?pueden llamar directamente en la clase sin necesidad de crear un objeto o instancia de la misma.
+?permite crear nuevas clases basadas en clases
+?existentes, aprovechando y extendiendo su funcionalidad
 */
 class perro{
-    private $nombre;
+    public $nombre;
     protected $raza;
     private static $ladrar;
 
@@ -30,11 +29,11 @@ class perro{
         $this->raza=$raza;
     }
     public function ladrar(){
-        echo 'wof wof'.self::$ladrar.$this->nombre;
+        return 'wof wof'.self::$ladrar.$this->nombre;
     }
 }
-/*
-TODO: POO Instanciar 
-*/
-require_once('clases/app.php');
-$pastor= new perro('nana','pastor aleman');
+class canino extends perro{
+    public function ladrar(){
+        return 'wof wof, te ladra'.$this->nombre;
+    }
+}
