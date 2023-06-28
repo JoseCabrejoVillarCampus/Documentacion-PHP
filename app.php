@@ -1,46 +1,24 @@
 <?php
 /*
-TODO: POO Clases Abstractas 
+TODO: POO Interfaces 
 */
 /*  
-?es una clase que no se puede instanciar directamente, sino que sirve
-?como una plantilla o base para otras clases. Se utiliza para definir la estructura común y los métodos
-?que deben implementar las clases hijas.
+?una interfaz es una estructura que define un conjunto de
+?métodos que una clase debe implementar. Es un contrato que especifica qué métodos debe
+?proporcionar una clase sin especificar cómo se implementan esos métodos.
 */
-abstract class animal{
-    abstract public function sonido();
+interface Area
+{
+    public function calcularArea();
 }
-class perro extends animal{
-    public $nombre;
-    protected $raza;
-    private static $ladrar;
-
-    public function __construct($nombre, $edad){
-        $this-> nombre = $nombre;
-        $this-> raza = $edad;
-        self::$ladrar=$nombre;
+class cuadrado implements Area{
+    private $arista;
+    public function __construct($arista){
+        $this->arista=$arista;
     }
-    public function sonido(){
-        echo "wof";
-    }
-    public function getNombre(){
-        return $this->nombre;
-    }
-    public function setNombre($nombre){
-        $this->nombre= $nombre;
-    }
-    public function getRaza(){
-        return $this->raza;
-    }
-    public function setRaza($raza){
-        $this->raza=$raza;
-    }
-    public function ladrar(){
-        return 'wof wof'.self::$ladrar.$this->nombre;
+    public function calcularArea(){
+        return ($this->arista)*2;
     }
 }
-class canino extends perro{
-    public function ladrar(){
-        return 'wof wof, te ladra'.$this->nombre;
-    }
-}
+$rectangulo = new cuadrado(3);
+echo $cuadrado->calcularArea();
