@@ -1,24 +1,40 @@
 <?php
 /*
-TODO: POO Interfaces 
+TODO: POO Polimorfismo 
 */
 /*  
-?una interfaz es una estructura que define un conjunto de
-?métodos que una clase debe implementar. Es un contrato que especifica qué métodos debe
-?proporcionar una clase sin especificar cómo se implementan esos métodos.
+?upermite tratar objetos
+?de diferentes clases de manera uniforme, utilizando una interfaz común..
 */
-interface Area
-{
-    public function calcularArea();
-}
-class cuadrado implements Area{
-    private $arista;
-    public function __construct($arista){
-        $this->arista=$arista;
-    }
-    public function calcularArea(){
-        return ($this->arista)*2;
+// Clase base
+class Animal {
+    public function hacerSonido() {
+        echo "Haciendo un sonido genérico";
     }
 }
-$rectangulo = new cuadrado(3);
-echo $cuadrado->calcularArea();
+
+// Clases derivadas
+class Perro extends Animal {
+    public function hacerSonido() {
+        echo "Guau guau!";
+    }
+}
+
+class Gato extends Animal {
+    public function hacerSonido() {
+        echo "Miau miau!";
+    }
+}
+
+// Función que utiliza polimorfismo
+function hacerSonidoAnimal(Animal $animal) {
+    $animal->hacerSonido();
+}
+
+// Crear instancias de las clases derivadas
+$perro = new Perro();
+$gato = new Gato();
+
+// Llamar a la función con instancias de diferentes clases
+hacerSonidoAnimal($perro);  // Output: "Guau guau!"
+hacerSonidoAnimal($gato);   // Output: "Miau miau!"
