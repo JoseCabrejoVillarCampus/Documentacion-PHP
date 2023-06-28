@@ -1,12 +1,16 @@
 <?php
 /*
-TODO: POO Herencia 
+TODO: POO Clases Abstractas 
 */
 /*  
-?permite crear nuevas clases basadas en clases
-?existentes, aprovechando y extendiendo su funcionalidad
+?es una clase que no se puede instanciar directamente, sino que sirve
+?como una plantilla o base para otras clases. Se utiliza para definir la estructura común y los métodos
+?que deben implementar las clases hijas.
 */
-class perro{
+abstract class animal{
+    abstract public function sonido();
+}
+class perro extends animal{
     public $nombre;
     protected $raza;
     private static $ladrar;
@@ -15,6 +19,9 @@ class perro{
         $this-> nombre = $nombre;
         $this-> raza = $edad;
         self::$ladrar=$nombre;
+    }
+    public function sonido(){
+        echo "wof";
     }
     public function getNombre(){
         return $this->nombre;
