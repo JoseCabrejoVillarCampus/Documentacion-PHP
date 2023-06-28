@@ -1,13 +1,36 @@
 <?php
 /*
-TODO: Propiedades 
+TODO: POO Clases 
 */
 /*  
-?Son las variables pertenecientes a una clase, tambien llamadas atributos o campos. Se definen usando palabras reservadas Public, Protected o Private.
-?Dentro de los metodos de una clase, se puede acceder a las propiedades no estaticas utilizando ->(operador de objeto)
+?Las clases son una plantilla que nos permiten definir caracteristicas y comportamientos de los objetosque se pueden crear a traves de dicha clase
 */
-$this->propiedad;
-/*  
-? A las propiedades estaticas se puede acceder utilizando :: (doble punto)
+class perro{
+    private $nombre;
+    protected $raza;
+
+    public function __construct($nombre, $edad){
+        $this-> nombre = $nombre;
+        $this-> raza = $edad;
+    }
+    public function getNombre(){
+        return $this->nombre;
+    }
+    public function setNombre($nombre){
+        $this->nombre= $nombre;
+    }
+    public function getRaza(){
+        return $this->raza;
+    }
+    public function setRaza($raza){
+        $this->raza=$raza;
+    }
+    public function ladrar(){
+        echo 'wof wof, te ladra'.$this->nombre;
+    }
+}
+/*
+TODO: POO Instanciar 
 */
-self::propiedad
+require_once('clases/app.php');
+$pastor= new perro('nana','pastor aleman');
