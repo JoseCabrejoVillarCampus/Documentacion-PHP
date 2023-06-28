@@ -1,40 +1,17 @@
 <?php
 /*
-TODO: POO Polimorfismo 
+TODO: Autoload 
 */
 /*  
-?upermite tratar objetos
-?de diferentes clases de manera uniforme, utilizando una interfaz común..
+?es una técnica que permite cargar automáticamente las
+?clases cuando son necesarias, sin tener que incluir manualmente los archivos de clase en cada punto
+?del código.
 */
 // Clase base
-class Animal {
-    public function hacerSonido() {
-        echo "Haciendo un sonido genérico";
-    }
+function my_autoload($clase){
+    require __DIR__.'/clases/'.$clase.'.php';
 }
+spl_autoload_register('my_autoload');
 
-// Clases derivadas
-class Perro extends Animal {
-    public function hacerSonido() {
-        echo "Guau guau!";
-    }
-}
-
-class Gato extends Animal {
-    public function hacerSonido() {
-        echo "Miau miau!";
-    }
-}
-
-// Función que utiliza polimorfismo
-function hacerSonidoAnimal(Animal $animal) {
-    $animal->hacerSonido();
-}
-
-// Crear instancias de las clases derivadas
-$perro = new Perro();
-$gato = new Gato();
-
-// Llamar a la función con instancias de diferentes clases
-hacerSonidoAnimal($perro);  // Output: "Guau guau!"
-hacerSonidoAnimal($gato);   // Output: "Miau miau!"
+$nombre= new Nombre();
+$edad= new Edades();
